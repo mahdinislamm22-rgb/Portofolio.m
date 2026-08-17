@@ -1,21 +1,19 @@
 // ─────────────────────────────────────────────────────────
-// SITE DATA — this is the ONE file you need to edit to update
-// your name, bio, links, skills and services. Projects live
-// in their own file: src/data/projects.js
+// SITE DATA — primary place to update your portfolio content.
 // ─────────────────────────────────────────────────────────
 
 export const profile = {
   name: 'Mahdin',
   title: 'Web Developer',
-  positioning: 'Creative Web Developer & Web Designer',
+  positioning: 'Creative Web Developer & Designer',
   heroDescription:
-    'I build modern, responsive and interactive websites that turn ideas into engaging digital experiences.',
+    'I design and build modern, elegant websites that blend clean code, storytelling, and smooth interactions into memorable digital experiences.',
   aboutText:
-    "I'm a passionate web developer focused on creating modern, responsive and user-friendly websites. I enjoy turning ideas into clean and interactive digital experiences and continuously improving my skills through real-world projects.",
-  email: 'hello@mahdin.dev', // change to your real email
+    "I'm a creative web developer focused on building polished, responsive, and user-friendly websites. I enjoy turning ideas into digital experiences that feel refined, functional, and memorable — with attention to detail, design, and interaction.",
+  email: 'mahdinislamm22@gmail.com',
   socials: {
-    github: 'https://github.com/your-username', // change to your GitHub
-    linkedin: 'https://linkedin.com/in/your-username', // change to your LinkedIn
+    instagram: 'https://instagram.com/_mahdinnnn',
+    linkedin: 'https://www.linkedin.com/in/mahdin-islam-mohammed-6705152a9',
   },
 }
 
@@ -29,14 +27,12 @@ export const navLinks = [
 ]
 
 export const aboutHighlights = [
-  { title: 'Web Development', desc: 'Building functional, well-structured websites.' },
-  { title: 'Responsive Design', desc: 'Interfaces that adapt to every screen size.' },
-  { title: 'UI/UX', desc: 'Designing layouts that are clear and easy to use.' },
-  { title: 'Creative Interaction', desc: 'Adding motion and detail that feels alive.' },
+  { title: 'Web Development', desc: 'Designing and building responsive websites with clean structure and performance in mind.' },
+  { title: 'Responsive Design', desc: 'Creating interfaces that smoothly adapt across devices and layouts.' },
+  { title: 'UI/UX', desc: 'Focusing on clarity, flow, and meaningful interaction patterns.' },
+  { title: 'Creative Interaction', desc: 'Adding motion, rhythm, and visual depth that make a brand feel alive.' },
 ]
 
-// Skills — grouped by category. No fake percentages, just an
-// honest list of what's actually used.
 export const skillGroups = [
   {
     category: 'Frontend',
@@ -48,26 +44,26 @@ export const skillGroups = [
   },
   {
     category: 'Other',
-    items: ['Responsive Web Design', 'Basic UI/UX', 'AI-assisted Development'],
+    items: ['Responsive Web Design', 'UI/UX Thinking', 'Creative Frontend'],
   },
 ]
 
 export const services = [
   {
     title: 'Web Development',
-    description: 'Modern and responsive websites built for different devices and screen sizes.',
+    description: 'Modern, responsive websites built to look sharp and work smoothly across devices.',
   },
   {
     title: 'Web Design',
-    description: 'Clean and engaging interfaces designed around usability and visual clarity.',
+    description: 'Elegant interfaces with a focus on brand identity, clarity, and visual balance.',
   },
   {
     title: 'Responsive Design',
-    description: 'Websites that provide a consistent experience across desktop, tablet and mobile.',
+    description: 'User experiences designed to feel consistent and polished on desktop, tablet, and mobile.',
   },
   {
     title: 'Website Optimization',
-    description: 'Clean, lightweight and performance-conscious websites.',
+    description: 'Clean, lightweight, and thoughtful implementation that supports better user experience.',
   },
 ]
 
@@ -75,21 +71,21 @@ export const processSteps = [
   {
     number: '01',
     title: 'Discover',
-    description: 'Understand the idea, goals and requirements.',
+    description: 'Understand the vision, goals, and details behind the idea.',
   },
   {
     number: '02',
     title: 'Design',
-    description: 'Create the visual direction and user experience.',
+    description: 'Shape the aesthetic direction and experience with intention.',
   },
   {
     number: '03',
     title: 'Develop',
-    description: 'Build the website with clean and maintainable code.',
+    description: 'Build the interface with responsive layouts and refined interactions.',
   },
   {
     number: '04',
     title: 'Launch',
-    description: 'Test, optimize and publish the final website.',
+    description: 'Polish, test, and deliver the final product with confidence.',
   },
 ]

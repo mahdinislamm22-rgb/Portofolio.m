@@ -1,31 +1,46 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Github, Linkedin, Mail, Send } from 'lucide-react'
+import { Instagram, Linkedin, Mail, Send } from 'lucide-react'
 import { profile } from '../data/siteData'
 import Button from '../components/Button'
 import GlassCard from '../components/GlassCard'
 
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mzepjdzn'
+
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', message: '' })
+  const [status, setStatus] = useState({ type: 'idle', message: '' })
 
   const handleChange = (e) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
+    setStatus({ type: 'sending', message: 'Sending your message...' })
 
-    // ── No backend on this site, so the form opens the user's email
-    // client with the message pre-filled. This is the safe, frontend-only
-    // way to "send" a message without exposing any API keys.
-    //
-    // To collect messages directly instead, sign up for a free plan at
-    // a form service such as Formspree (https://formspree.io), then
-    // replace this function with a fetch() POST to the endpoint they
-    // give you — no backend code required on your side.
-    const subject = encodeURIComponent(`New message from ${form.name || 'your website'}`)
-    const body = encodeURIComponent(`${form.message}\n\n— ${form.name} (${form.email})`)
-    window.location.href = `mailto:${profile.email}?subject=${subject}&body=${body}`
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(form),
+      })
+
+      if (response.ok) {
+        setForm({ name: '', email: '', message: '' })
+        setStatus({ type: 'success', message: 'Message sent successfully. I will get back to you soon.' })
+        return
+      }
+
+      const data = await response.json().catch(() => ({}))
+      const errorMessage = data?.errors?.[0]?.message || 'Something went wrong. Please email me directly.'
+      setStatus({ type: 'error', message: errorMessage })
+    } catch (error) {
+      setStatus({ type: 'error', message: 'Something went wrong. Please email me directly.' })
+    }
   }
 
   return (
@@ -44,14 +59,14 @@ export default function Contact() {
             <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-ink">
               Have a project in mind?
             </h2>
-            <p className="mt-4 text-lg text-ink-dim">Let&apos;s build something great together.</p>
+            <p className="mt-4 text-lg text-ink-dim">Let&apos;s build something polished, useful, and memorable.</p>
 
             <div className="mt-8 flex flex-wrap gap-4">
               <Button href={`mailto:${profile.email}`} variant="primary" icon={Mail}>
                 Email Me
               </Button>
-              <Button href={profile.socials.github} variant="ghost" icon={Github}>
-                GitHub
+              <Button href={profile.socials.instagram} variant="ghost" icon={Instagram}>
+                Instagram
               </Button>
               <Button href={profile.socials.linkedin} variant="ghost" icon={Linkedin}>
                 LinkedIn
@@ -115,13 +130,23 @@ export default function Contact() {
                   />
                 </div>
 
-                <Button type="submit" variant="primary" icon={Send} className="w-full justify-center">
-                  Send Message
+                <Button type="submit" variant="primary" icon={Send} className="w-full justify-center" disabled={status.type === 'sending'}>
+                  {status.type === 'sending' ? 'Sending...' : 'Send Message'}
                 </Button>
 
-                <p className="text-xs text-ink-faint">
-                  This opens your email app with the message pre-filled — no data is sent to a server.
-                </p>
+                {status.message && (
+                  <p
+                    className={`text-sm ${
+                      status.type === 'success'
+                        ? 'text-emerald-300'
+                        : status.type === 'error'
+                          ? 'text-rose-300'
+                          : 'text-ink-dim'
+                    }`}
+                  >
+                    {status.message}
+                  </p>
+                )}
               </form>
             </GlassCard>
           </motion.div>

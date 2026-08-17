@@ -1,0 +1,42 @@
+<svg width="720" height="860" viewBox="0 0 720 860" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="80" y1="60" x2="640" y2="820" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F172A"/>
+      <stop offset="0.55" stop-color="#111827"/>
+      <stop offset="1" stop-color="#1F1137"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="150" y1="120" x2="555" y2="690" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7C3AED"/>
+      <stop offset="0.45" stop-color="#60A5FA"/>
+      <stop offset="1" stop-color="#5EEAD4"/>
+    </linearGradient>
+    <linearGradient id="shirt" x1="170" y1="540" x2="470" y2="780" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E2E8F0"/>
+      <stop offset="1" stop-color="#CBD5E1"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="720" height="860" rx="52" fill="url(#bg)"/>
+  <circle cx="180" cy="180" r="150" fill="url(#glow)" fill-opacity="0.18"/>
+  <circle cx="560" cy="120" r="130" fill="#5EEAD4" fill-opacity="0.12"/>
+  <circle cx="580" cy="690" r="170" fill="#7C3AED" fill-opacity="0.12"/>
+
+  <path d="M200 320C200 206.795 284.795 122 398 122H420C533.205 122 618 206.795 618 320V466C618 579.205 533.205 664 420 664H398C284.795 664 200 579.205 200 466V320Z" fill="url(#glow)" fill-opacity="0.2"/>
+
+  <path d="M290 335C290 254.268 356.268 188 437 188C517.732 188 584 254.268 584 335V382C584 462.732 517.732 529 437 529C356.268 529 290 462.732 290 382V335Z" fill="#F4E7D6"/>
+  <path d="M325 400C338.558 355.92 376.493 324 418.5 324C459.869 324 497.589 355.105 511.5 399.5C503.698 379.33 488.842 362.534 470.5 350.5C451.195 337.427 430.268 330 408 330C381.999 330 359.718 338.956 340.5 354.5C325.827 365.874 312.791 382.295 305 401C307.689 400.231 316.063 399.66 325 400Z" fill="#0F172A" fill-opacity="0.22"/>
+  <path d="M356 361C378.51 338.155 414.053 324 451 324C490.431 324 525.651 340.161 548 368.5C536.469 351.341 512.83 341 487 341H364C355.762 341 349 347.762 349 356V363C349 430.196 381.307 494.132 423.5 520.5C390.675 517.633 355.979 488.119 335 446.5C318.484 414.788 321.486 387.789 356 361Z" fill="#0F172A" fill-opacity="0.18"/>
+  <path d="M390 366C406.126 349.666 432.54 340 460 340C495.346 340 528.965 356.134 551 385.5C538.201 372.938 518.02 364 495 364H385C380.582 364 377 367.582 377 372V375C377 430.073 409.898 484.483 450 503.5C429.412 495.626 406.554 480.973 389 457.5C371.899 434.449 362 408.542 362 381.5C362 373.023 366.363 366.316 390 366Z" fill="#111827" fill-opacity="0.15"/>
+
+  <circle cx="390" cy="402" r="10" fill="#111827"/>
+  <circle cx="484" cy="402" r="10" fill="#111827"/>
+  <path d="M409 470C428.741 485.712 452.786 487.77 474 470" stroke="#111827" stroke-width="10" stroke-linecap="round"/>
+
+  <path d="M402 598C424.712 638.545 478.61 652.47 522 633.5L560 612.5V778.5H200V633.5L250 671.5C289.2 699.187 353.708 640.833 402 598Z" fill="url(#shirt)"/>
+  <path d="M315 620L360 680H448L492 620" stroke="#94A3B8" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M310 806C319.467 755.274 360.481 718 405 718C447.518 718 491.113 756.469 497 806H310Z" fill="#E2E8F0" fill-opacity="0.9"/>
+
+  <rect x="102" y="110" width="120" height="38" rx="19" fill="#FFFFFF" fill-opacity="0.08"/>
+  <circle cx="126" cy="129" r="6" fill="#5EEAD4"/>
+  <text x="146" y="134" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="16" font-weight="600">M</text>
+</svg>

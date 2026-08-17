@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { ExternalLink, Github, ImageOff } from 'lucide-react'
+import { ExternalLink, ImageOff } from 'lucide-react'
 import { projects } from '../data/projects'
 import SectionHeading from '../components/SectionHeading'
 import GlassCard from '../components/GlassCard'
@@ -95,20 +95,6 @@ export default function Projects() {
                     ) : (
                       <span className="inline-flex items-center gap-1.5 text-sm font-medium text-ink-faint cursor-not-allowed">
                         Live Demo <ExternalLink size={14} aria-hidden="true" />
-                      </span>
-                    )}
-                    {project.githubUrl ? (
-                      <a
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 text-sm font-medium text-ink hover:text-accent-cyan transition-colors"
-                      >
-                        GitHub <Github size={14} aria-hidden="true" />
-                      </a>
-                    ) : (
-                      <span className="inline-flex items-center gap-1.5 text-sm font-medium text-ink-faint cursor-not-allowed">
-                        GitHub <Github size={14} aria-hidden="true" />
                       </span>
                     )}
                   </div>

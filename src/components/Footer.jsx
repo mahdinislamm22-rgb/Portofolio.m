@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail } from 'lucide-react'
+import { Instagram, Linkedin, Mail } from 'lucide-react'
 import { navLinks, profile } from '../data/siteData'
 
 export default function Footer() {
@@ -30,13 +30,13 @@ export default function Footer() {
 
           <div className="flex items-center gap-4">
             <a
-              href={profile.socials.github}
+              href={profile.socials.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="GitHub profile"
+              aria-label="Instagram profile"
               className="text-ink-dim hover:text-ink transition-colors"
             >
-              <Github size={20} />
+              <Instagram size={20} />
             </a>
             <a
               href={profile.socials.linkedin}
