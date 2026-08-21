@@ -12,4 +12,15 @@ export const projects = [
     githubUrl: '',
     placeholder: false,
   },
+  {
+    id: 'pizzeria-da-enzo',
+    name: 'Pizzeria Da Enzo',
+    description:
+      'A modern, responsive website for an authentic Italian pizzeria featuring interactive menus, location info, and an engaging layout.',
+    tech: ['React', 'Tailwind CSS', 'JavaScript'],
+    image: null,
+    liveUrl: 'https://pizzeria-da-enzo.vercel.app/',
+    githubUrl: '',
+    placeholder: false,
+  },
 ]
