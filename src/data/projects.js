@@ -1,4 +1,5 @@
 import ariaDolceScreenshot from '../assets/aria-dolce-screenshot.png'
+import newProjectmg from '../assets/newprojectmg.png'
 
 export const projects = [
   {
@@ -18,7 +19,7 @@ export const projects = [
     description:
       'A modern, responsive website for an authentic Italian pizzeria featuring interactive menus, location info, and an engaging layout.',
     tech: ['React', 'Tailwind CSS', 'JavaScript'],
-    image: null,
+    image: newProjectmg,
     liveUrl: 'https://pizzeria-da-enzo.vercel.app/',
     githubUrl: '',
     placeholder: false,
