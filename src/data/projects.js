@@ -1,5 +1,6 @@
 import ariaDolceScreenshot from '../assets/aria-dolce-screenshot.png'
 import newProjectmg from '../assets/newprojectmg.png'
+import Sneakershub from '../assets/sneakershub.png' 
 
 export const projects = [
   {
@@ -21,6 +22,17 @@ export const projects = [
     tech: ['React', 'Tailwind CSS', 'JavaScript'],
     image: newProjectmg,
     liveUrl: 'https://pizzeria-da-enzo.vercel.app/',
+    githubUrl: '',
+    placeholder: false,
+  },
+  {
+    id: 'Sneakershub', // 2. Added your third project object here
+    name: 'Sneakershub',
+    description:
+      'A brief description of what this website or web app does and what technologies were used to build it.',
+    tech: ['React', 'Tailwind CSS', 'JavaScript'],
+    image: Sneakershub,
+    liveUrl: 'https://sneakers-two-theta.vercel.app/', // Change to your live link
     githubUrl: '',
     placeholder: false,
   },
