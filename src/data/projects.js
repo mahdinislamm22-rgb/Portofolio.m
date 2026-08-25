@@ -1,6 +1,7 @@
 import ariaDolceScreenshot from '../assets/aria-dolce-screenshot.png'
 import newProjectmg from '../assets/newprojectmg.png'
 import sneakerhub from '../assets/sneakerhub.png'
+import computerImg from '../assets/computer.png' // 1. Photo Import
 
 export const projects = [
   {
@@ -33,6 +34,17 @@ export const projects = [
     tech: ['React', 'Tailwind CSS', 'JavaScript'],
     image: sneakerhub,
     liveUrl: 'https://sneakers-two-theta.vercel.app/', // Change to your live link
+    githubUrl: '',
+    placeholder: false,
+  },
+  {
+    id: 'inside-your-computer', // 2. Notun Project
+    name: 'Inside Your Computer',
+    description:
+      'An interactive and educational web project exploring computer hardware components, visual layouts, and modern Web UI design.',
+    tech: ['React', 'Tailwind CSS', 'JavaScript'],
+    image: computerImg,
+    liveUrl: 'https://insideyourcomputer.vercel.app/',
     githubUrl: '',
     placeholder: false,
   },
