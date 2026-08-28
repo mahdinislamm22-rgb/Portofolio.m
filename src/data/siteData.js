@@ -7,9 +7,12 @@ export const profile = {
   title: 'Web Developer',
   positioning: 'Creative Web Developer & Designer',
   heroDescription:
-    'I design and build modern, elegant websites that blend clean code, storytelling, and smooth interactions into memorable digital experiences.',
+    'I like making things from scratch. ideas, brands, interfaces, websites and everything in between. I m into web development, UI/UX and creative experiments, and I enjoy figuring things out as I build. Basically, I make things because its fun :3.',
   aboutText:
-    "I'm a creative web developer focused on building polished, responsive, and user-friendly websites. I enjoy turning ideas into digital experiences that feel refined, functional, and memorable — with attention to detail, design, and interaction.",
+    `I've never really been the type to stick to one thing. I'll start with a website, end up designing a logo, spend way too long on a tiny animation, and somehow learn three new things along the way.
+A lot of what I know comes from simply trying things myself. I like figuring out how things work, experimenting with new tools, and turning an idea into something I can actually see and use.
+
+I'm still learning, but that's probably my favorite part. There's always something new to break, rebuild, and make a little better.`,
   email: 'mahdinislamm22@gmail.com',
   socials: {
     instagram: 'https://instagram.com/_mahdinnnn',
