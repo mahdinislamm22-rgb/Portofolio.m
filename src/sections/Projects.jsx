@@ -42,66 +42,83 @@ export default function Projects() {
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map((project, i) => (
-            <motion.article
-              key={project.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-60px' }}
-              transition={{ duration: 0.55, delay: i * 0.08 }}
-              className={i === 0 ? 'md:col-span-2' : ''}
-            >
-              <GlassCard className="group overflow-hidden h-full flex flex-col hover:border-white/20 hover:shadow-glow-sm transition-all duration-300">
-                <div className={`relative overflow-hidden ${i === 0 ? 'aspect-[21/9]' : 'aspect-[16/10]'}`}>
-                  <div className="h-full w-full transition-transform duration-500 group-hover:scale-[1.04]">
-                    <ProjectImage project={project} />
-                  </div>
-                  {project.placeholder && (
-                    <span className="absolute top-4 right-4 rounded-full border border-white/15 bg-black/40 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-ink-dim backdrop-blur-sm">
-                      Placeholder
-                    </span>
-                  )}
-                </div>
+          {projects.map((project, i) => {
+            const ImageWrapper = project.liveUrl ? 'a' : 'div'
+            const linkProps = project.liveUrl
+              ? {
+                  href: project.liveUrl,
+                  target: '_blank',
+                  rel: 'noopener noreferrer',
+                  ariaLabel: `View live demo of ${project.name}`,
+                }
+              : {}
 
-                <div className="flex flex-1 flex-col p-6 sm:p-7">
-                  <h3 className="font-display text-xl sm:text-2xl font-semibold text-ink">
-                    {project.name}
-                  </h3>
-                  <p className="mt-2.5 text-sm sm:text-base text-ink-dim leading-relaxed flex-1">
-                    {project.description}
-                  </p>
-
-                  <div className="mt-5 flex flex-wrap gap-2">
-                    {project.tech.map((t) => (
-                      <span
-                        key={t}
-                        className="rounded-md border border-white/10 bg-white/[0.04] px-2.5 py-1 font-mono text-[11px] text-ink-dim"
-                      >
-                        {t}
-                      </span>
-                    ))}
-                  </div>
-
-                  <div className="mt-6 flex items-center gap-4">
-                    {project.liveUrl ? (
-                      <a
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 text-sm font-medium text-ink hover:text-accent-cyan transition-colors"
-                      >
-                        Live Demo <ExternalLink size={14} aria-hidden="true" />
-                      </a>
-                    ) : (
-                      <span className="inline-flex items-center gap-1.5 text-sm font-medium text-ink-faint cursor-not-allowed">
-                        Live Demo <ExternalLink size={14} aria-hidden="true" />
+            return (
+              <motion.article
+                key={project.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-60px' }}
+                transition={{ duration: 0.55, delay: i * 0.08 }}
+                className={i === 0 ? 'md:col-span-2' : ''}
+              >
+                <GlassCard className="group overflow-hidden h-full flex flex-col hover:border-white/20 hover:shadow-glow-sm transition-all duration-300">
+                  <ImageWrapper
+                    {...linkProps}
+                    className={`block relative overflow-hidden ${
+                      i === 0 ? 'aspect-[21/9]' : 'aspect-[16/10]'
+                    } ${project.liveUrl ? 'cursor-pointer' : ''}`}
+                  >
+                    <div className="h-full w-full transition-transform duration-500 group-hover:scale-[1.04]">
+                      <ProjectImage project={project} />
+                    </div>
+                    {project.placeholder && (
+                      <span className="absolute top-4 right-4 rounded-full border border-white/15 bg-black/40 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-ink-dim backdrop-blur-sm">
+                        Placeholder
                       </span>
                     )}
+                  </ImageWrapper>
+
+                  <div className="flex flex-1 flex-col p-6 sm:p-7">
+                    <h3 className="font-display text-xl sm:text-2xl font-semibold text-ink">
+                      {project.name}
+                    </h3>
+                    <p className="mt-2.5 text-sm sm:text-base text-ink-dim leading-relaxed flex-1">
+                      {project.description}
+                    </p>
+
+                    <div className="mt-5 flex flex-wrap gap-2">
+                      {project.tech.map((t) => (
+                        <span
+                          key={t}
+                          className="rounded-md border border-white/10 bg-white/[0.04] px-2.5 py-1 font-mono text-[11px] text-ink-dim"
+                        >
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+
+                    <div className="mt-6 flex items-center gap-4">
+                      {project.liveUrl ? (
+                        <a
+                          href={project.liveUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 text-sm font-medium text-ink hover:text-accent-cyan transition-colors"
+                        >
+                          Live Demo <ExternalLink size={14} aria-hidden="true" />
+                        </a>
+                      ) : (
+                        <span className="inline-flex items-center gap-1.5 text-sm font-medium text-ink-faint cursor-not-allowed">
+                          Live Demo <ExternalLink size={14} aria-hidden="true" />
+                        </span>
+                      )}
+                    </div>
                   </div>
-                </div>
-              </GlassCard>
-            </motion.article>
-          ))}
+                </GlassCard>
+              </motion.article>
+            )
+          })}
         </div>
       </div>
     </section>
