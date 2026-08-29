@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Instagram, Linkedin, Mail, Send } from 'lucide-react'
+import { Github, Instagram, Linkedin, Mail, Send } from 'lucide-react'
 import { profile } from '../data/siteData'
 import Button from '../components/Button'
 import GlassCard from '../components/GlassCard'
@@ -64,6 +64,9 @@ export default function Contact() {
             <div className="mt-8 flex flex-wrap gap-4">
               <Button href={`mailto:${profile.email}`} variant="primary" icon={Mail}>
                 Email Me
+              </Button>
+              <Button href={profile.socials.github || 'https://github.com/mahdinislamm22-rgb'} variant="ghost" icon={Github}>
+                GitHub
               </Button>
               <Button href={profile.socials.instagram} variant="ghost" icon={Instagram}>
                 Instagram

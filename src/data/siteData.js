@@ -15,8 +15,9 @@ A lot of what I know comes from simply trying things myself. I like figuring out
 I'm still learning, but that's probably my favorite part. There's always something new to break, rebuild, and make a little better.`,
   email: 'mahdinislamm22@gmail.com',
   socials: {
+    github: 'https://github.com/mahdinislamm22-rgb',
     instagram: 'https://instagram.com/_mahdinnnn',
-    linkedin: 'https://www.linkedin.com/in/mahdin-islam-mohammed-6705152a9',
+    linkedin: 'https://www.linkedin.com/in/mahdin-mohammed-6705152a9/',
   },
 }
 
