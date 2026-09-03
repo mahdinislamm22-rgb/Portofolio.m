@@ -3,6 +3,7 @@ import newProjectmg from '../assets/newprojectmg.png'
 import computerImg from '../assets/computer.png'
 import sneakerhub from '../assets/sneakerhub.png'
 import track from '../assets/track.png'
+import internet from '../assets/internet.png'
  
 
 export const projects = [
@@ -36,6 +37,17 @@ export const projects = [
     tech: ['React', 'Tailwind CSS', 'JavaScript'],
     image: computerImg,
     liveUrl: 'https://insideyourcomputer.vercel.app/',
+    githubUrl: '',
+    placeholder: false,
+  },
+   {
+    id: 'how-the-internet-works',
+    name: 'how the Internet Works',
+    description:
+      'A modern, responsive website for an authentic Italian pizzeria featuring interactive menus, location info, and an engaging layout.',
+    tech: ['React', 'Tailwind CSS', 'JavaScript'],
+    image: internet,
+    liveUrl: 'https://how-the-internet-works-neon.vercel.app/',
     githubUrl: '',
     placeholder: false,
   },
