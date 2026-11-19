@@ -4,7 +4,6 @@
 
 export const profile = {
   name: 'Mahdin',
-  title: 'Web Developer',
   positioning: 'Creative Web Developer & Designer',
   heroDescription:
     'I like making things from scratch. ideas, brands, interfaces, websites and everything in between. I m into web development, UI/UX and creative experiments, and I enjoy figuring things out as I build. Basically, I make things because its fun :3.',

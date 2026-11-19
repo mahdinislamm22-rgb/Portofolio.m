@@ -44,7 +44,7 @@ export const projects = [
     id: 'how-the-internet-works',
     name: 'how the Internet Works',
     description:
-      'A modern, responsive website for an authentic Italian pizzeria featuring interactive menus, location info, and an engaging layout.',
+      'An interactive and educational web application that visually breaks down fundamental networking concepts, protocol workflows, and data delivery across the web.',
     tech: ['React', 'Tailwind CSS', 'JavaScript'],
     image: internet,
     liveUrl: 'https://how-the-internet-works-neon.vercel.app/',
